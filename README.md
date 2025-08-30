@@ -29,3 +29,7 @@ This script automatically creates a malicious tarball and attempts to trigger th
 2.  **Craft a Malicious Tarball**: It creates a compressed tar archive containing a file with a path traversal payload (e.g., `openssl-3.1.8/../../PWNED.txt`).
 3.  **Trigger the Vulnerability**: It calls the `_unpack_src()` method, which unknowingly extracts the malicious file to a location outside the intended build directory.
 4.  **Verify and Report**: It checks for the presence of the escaped file and generates a report with a clear pass/fail status, along with contextual information and an evidence folder.
+
+### Before/After Patch
+<img width="856" height="672" alt="image" src="https://github.com/user-attachments/assets/298e0ff8-79c8-44de-8221-69a00a115a8a" />
+
