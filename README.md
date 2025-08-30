@@ -6,12 +6,12 @@ This repository contains a self-contained Proof-of-Concept (PoC) script that dem
 
 * **Vulnerable Component**: Tools/ssl/multissltests.py
 * **CWE**: CWE-22 (Improper Limitation of a Pathname to a Restricted Directory 'Path Traversal')
+* **Affected Versions**: < 3.14
 * **Vulnerability Description**: The _unpack_src method of the AbstractBuilder class used tarfile.extractall() without a filter or proper path validation. This allowss an attacker to craft a malicious tar archive that, when processed by the script, could write a file to an arbitrary location on the filesystem.
 
 ### PoC Usage
 
-This script automatically creates a malicious tarball and attempts to trigger the vulnerability. It requires no external dependencies beyond the CPython source tree.
-
+This script automatically creates a malicious tarball and attempts to trigger the vulnerability. It requires no external dependencies beyond the CPython source tree:
 * **One-Click Execution**:
 
     ```bash
